@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+const HtmlWP = require("html-webpack-plugin");
 
 module.exports = {
     entry: './src/app.js',
@@ -7,6 +8,10 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         filename: 'app.bundle.js'
     },
+    plugins: [new HtmlWP({
+        filename: "index.html",
+        template: './src/index.html'
+    })],
     module: {
         loaders: [
             {
