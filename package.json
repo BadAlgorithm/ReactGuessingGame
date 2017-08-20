@@ -6,6 +6,7 @@
   "scripts": {
     "webpack": "webpack",
     "watch": "webpack --watch",
+    "test": "jasmine",
     "build": "webpack --config webpack.config.prod.js"
   },
   "repository": {
@@ -39,6 +40,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "jasmine": "^2.7.0",
+    "jasmine-spec-reporter": "^4.2.1",
     "webpack": "^3.0.0"
   }
 }

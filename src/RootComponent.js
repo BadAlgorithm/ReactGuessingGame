@@ -1,14 +1,13 @@
-class RootComponent extends React.Component {
+import React from "react"
+import UserInputComponent from "./user_input_feature/UserInputComponent";
 
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
+const RootComponent = () => {
+    return (
+        <div>
             <div>Hello guessing game app!</div>
-        );
-    }
-}
+            <UserInputComponent/>
+        </div>
+    );
+};
 
 export default RootComponent;
