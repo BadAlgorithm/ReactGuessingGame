@@ -1,24 +1,15 @@
 var path = require('path');
-var webpack = require('webpack');
 const HtmlWP = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin("style.css");
 
 module.exports = {
-    entry: './src/app.js',
+    entry: ['./src/app.js', "./src/main.scss"],
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'app.bundle.js'
     },
-    plugins: [
-        new HtmlWP({
-            filename: "index.html",
-            template: './src/index.html'
-        }),
-        extractSass,
-
-    ],
     module: {
         loaders: [],
         rules: [
@@ -28,15 +19,23 @@ module.exports = {
                 query: {
                     presets: ['es2015', 'react']
                 }
-            },
-            {
-                test: /\.s?css$/,
+            }, {
+                test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                    use: ["css-loader", "sass-loader"],
+                    use: ["css-loader", "postcss-loader", "sass-loader"],
                     fallback: "style-loader"
                 })
             }]
     },
+    plugins: [
+        new HtmlWP({
+            filename: "index.html",
+            template: './src/index.html',
+            inject: "body"
+        }),
+        extractSass
+
+    ],
     stats: {
         colors: true
     },
