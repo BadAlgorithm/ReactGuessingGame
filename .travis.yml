@@ -12,6 +12,7 @@ deploy:
   access_key_id: $aws_access_key
   secret_access_key: $aws_secret_key
   local_dir: build
+  branch: staging
   bucket: "react-guessing-game"
   skip_cleanup: true
   acl: public_read
