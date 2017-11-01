@@ -3,9 +3,7 @@ var webpack = require('webpack');
 const HtmlWP = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-// const extractSass = new ExtractTextPlugin({
-//     filename: "./build/stylesheets/guessing_game.css"
-// });
+const extractSass = new ExtractTextPlugin("style.css");
 
 module.exports = {
     entry: './src/app.js',
@@ -18,7 +16,8 @@ module.exports = {
             filename: "index.html",
             template: './src/index.html'
         }),
-        new ExtractTextPlugin("build.css")
+        extractSass,
+
     ],
     module: {
         loaders: [],
@@ -31,9 +30,9 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
+                test: /\.s?css$/,
                 use: ExtractTextPlugin.extract({
-                    use: ["css-loader", "postcss-loader", "sass-loader"],
+                    use: ["css-loader", "sass-loader"],
                     fallback: "style-loader"
                 })
             }]
