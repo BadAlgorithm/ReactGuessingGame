@@ -9,6 +9,7 @@ script:
   - npm run webpack
 before_install:
   - gem install sass
+  - gem install compass
 deploy:
   provider: s3
   access_key_id: $aws_access_key
