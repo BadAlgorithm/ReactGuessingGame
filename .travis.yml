@@ -10,6 +10,7 @@ script:
 before_install:
   - gem install sass
   - gem install compass
+  - npm rebuild node-sass
 deploy:
   provider: s3
   access_key_id: $aws_access_key
