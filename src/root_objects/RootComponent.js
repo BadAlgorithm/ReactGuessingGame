@@ -4,7 +4,7 @@ import InstructionsComponent from "../instructions_feature/Instructions"
 import {Tab} from "semantic-ui-react"
 
 const tabs = [
-    {menuItem: "Instructions", render: () => <InstructionsComponent/>},
+    {menuItem: "Instructions1", render: () => <InstructionsComponent/>},
     {menuItem: "Game", render: () => <UserInputComponent/>}
 ];
 const RootComponent = () => {
