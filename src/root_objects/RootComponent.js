@@ -1,7 +1,7 @@
-import React from "react"
+import React from "react";
 import UserInputComponent from "../user_input_feature/UserInputComponent";
-import InstructionsComponent from "../instructions_feature/Instructions"
-import {Tab} from "semantic-ui-react"
+import InstructionsComponent from "../instructions_feature/Instructions";
+import {Tab} from "semantic-ui-react";
 
 const tabs = [
     {menuItem: "Instructions1", render: () => <InstructionsComponent/>},
