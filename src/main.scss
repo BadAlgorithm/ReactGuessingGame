@@ -1,6 +1,12 @@
+// Colour palette
+@import "./color_palette";
+
+//Feature Sass
 @import "./user_input_feature/user_input";
+
+//Global Sass
 h1{
-  color: #AF80ED;
+  color: $tuscany;
 }
 
 h2{
