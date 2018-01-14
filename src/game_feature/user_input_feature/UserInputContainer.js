@@ -12,7 +12,8 @@ const mapStateToProps = (state) => {
 };
 
 const mapToDispatch = (dispatch) => {
-    const buttonClicked = () => {
+    const buttonClicked = (event) => {
+        console.log(event.target.name);
         dispatch({type: "BTN", payload: {message: "clicked"}})
     };
     const getInput = (event) => {
