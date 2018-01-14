@@ -1,0 +1,1 @@
+export const userInputSelector = (state) => state.userInput;

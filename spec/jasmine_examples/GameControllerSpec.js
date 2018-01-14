@@ -5,7 +5,7 @@ describe("GameController", function () {
         () => expect(GameController.getPrompt(1, 1)).toEqual("correct!")
     );
     it("Should return correct number of guesses",
-        () => expect(GameController.countGuesses([1, 2, 3, 4])).toEqual(3)
+        () => expect(GameController.countGuesses([1, 2, 3, 4])).toEqual(4)
     );
     it("Should return true when game is over",
         () => expect(GameController.isGameOver(2, 2)).toEqual(true)

@@ -30,15 +30,12 @@ module.exports = [{
             }]
     },
     plugins: [
-        new UglifyJSPlugin(),
         new HtmlWP({
             filename: "index.html",
             template: './src/index.html',
-            inlineSource: '.(js|css)$',
-            minifyJS: true,
+            minifyJS: false,
             inject: true
         }),
-        new HtmlWebpackInlineSourcePlugin(),
         extractSass
 
     ],
