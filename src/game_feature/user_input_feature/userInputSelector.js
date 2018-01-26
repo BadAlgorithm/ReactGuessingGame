@@ -1,1 +1,1 @@
-export const userInputSelector = (state) => state.userInput;
+export const userInputSelector = (state) => state.userGuess;

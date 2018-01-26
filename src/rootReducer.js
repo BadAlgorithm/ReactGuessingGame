@@ -5,6 +5,6 @@ import {userInputReducer} from "./game_feature/user_input_feature/userInputReduc
 
 export default combineReducers(
     {
-        userInput: userInputReducer
+        userGuess: userInputReducer
     }
 );
