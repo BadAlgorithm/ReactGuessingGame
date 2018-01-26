@@ -16,7 +16,7 @@ const getPrompt = (targetNum, guessNumber) => {
     }
 };
 
-const isGameOver = (targetNum, guessNum) => {
+const isGuessCorrect = (targetNum, guessNum) => {
     "use strict";
     return targetNum === guessNum;
 };

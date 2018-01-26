@@ -6,9 +6,8 @@ const UserInputComponent = (props) => {
         <div itemID="myid">
             <h1>User Input</h1>
             <p>My User Input Feature, automatically deployed!</p>
-            <Input id="inputOne" onChange={props.getInput}/>
-            <Input id="inputTwo" onChange={props.getInput}/>
-            <Button name="clickButton" onClick={props.buttonClicked}>Click Me!</Button>
+            <Input id="inputChoice" onChange={props.getInput}/>
+            <Button name="userSelected" onClick={props.buttonClicked}>Click Me!</Button>
             <p>{props.message}</p>
         </div>
     )

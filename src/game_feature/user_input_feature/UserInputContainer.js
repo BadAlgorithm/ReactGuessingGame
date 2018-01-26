@@ -1,6 +1,7 @@
 import {connect} from "react-redux"
 import UserInputComponent from "./UserInputComponent";
 import {userInputSelector} from "./userInputSelector";
+import * as actions from "./actions";
 
 const mapStateToProps = (state) => {
     let userInput =  userInputSelector(state);
@@ -14,7 +15,10 @@ const mapStateToProps = (state) => {
 const mapToDispatch = (dispatch) => {
     const buttonClicked = (event) => {
         console.log(event.target.name);
-        dispatch({type: "BTN", payload: {message: "clicked"}})
+        switch (event.target.name) {
+            case actions.types.SUBMIT_TYPE:
+        }
+        dispatch(actions.creators.submitCreator())
     };
     const getInput = (event) => {
         console.log(event)
