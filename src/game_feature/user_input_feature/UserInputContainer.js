@@ -16,6 +16,7 @@ const mapStateToProps = (state) => {
 
 const mapToDispatch = (dispatch) => {
     const buttonClicked = (event) => {
+        event.persist();
         setTimeout(() => {
             console.log(event.target.name);
             switch (event.target.name) {
