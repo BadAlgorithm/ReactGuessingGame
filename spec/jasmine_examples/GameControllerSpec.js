@@ -8,9 +8,9 @@ describe("GameController", function () {
         () => expect(GameController.countGuesses([1, 2, 3, 4])).toEqual(4)
     );
     it("Should return true when game is over",
-        () => expect(GameController.isGameOver(2, 2)).toEqual(true)
+        () => expect(GameController.isGuessCorrect(2, 2)).toEqual(true)
     );
     it("Should return false on an incorrect Guess",
-        () => expect(GameController.isGameOver(1,2)).toEqual(false)
+        () => expect(GameController.isGuessCorrect(1,2)).toEqual(false)
     );
 });

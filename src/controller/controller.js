@@ -22,7 +22,7 @@ const isGuessCorrect = (targetNum, guessNum) => {
 };
 
 export default {
-    isGameOver,
+    isGuessCorrect,
     getPrompt,
     countGuesses
 }
