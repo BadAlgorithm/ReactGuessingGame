@@ -5,7 +5,7 @@ module.exports = function (config) {
         singleRun: true, // false => watch for changes and rerun tests
         autoWatch: true, // enable / disable watching files & then run tests
         colors: true,
-        reporters: ["spec", "progress", "coverage"],
+        reporters: ["spec", "progress", "coverage", "coveralls"],
         plugins: [
             "karma-spec-reporter",
             "karma-webpack",
