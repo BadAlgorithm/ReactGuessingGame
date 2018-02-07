@@ -1,5 +1,6 @@
 import React from "react";
 import {Input, Button} from "semantic-ui-react";
+import PropTypes from "prop-types";
 
 const UserInputComponent = (props) => {
     return (
@@ -11,6 +12,9 @@ const UserInputComponent = (props) => {
             <p>{props.message}</p>
         </div>
     )
+};
+
+UserInputComponent.propTypes = {
 };
 
 export default UserInputComponent;

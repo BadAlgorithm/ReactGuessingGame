@@ -3,7 +3,7 @@ import rootReducer from "./rootReducer.js"
 
 export default createStore(rootReducer,
     {
-        userInput: {
+        userGuess: {
             message: "new message"
         }
     });

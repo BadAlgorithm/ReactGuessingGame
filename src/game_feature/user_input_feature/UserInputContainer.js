@@ -3,7 +3,7 @@ import UserInputComponent from "./UserInputComponent";
 import {userInputSelector} from "./userInputSelector";
 import * as actions from "./actions";
 
-const mapStateToProps = (state) => {
+export const mapStateToProps = (state) => {
     let userInput = userInputSelector(state);
     console.log("State is:");
     console.log(state);
@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapToDispatch = (dispatch) => {
+export const mapToDispatch = (dispatch) => {
     const buttonClicked = (event) => {
         event.persist();
         setTimeout(() => {
@@ -28,6 +28,7 @@ const mapToDispatch = (dispatch) => {
     };
     const getInput = (event) => {
         event.persist();
+        console.log("event")
     };
     return {
         buttonClicked,
