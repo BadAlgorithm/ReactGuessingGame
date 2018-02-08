@@ -36,7 +36,7 @@ module.exports = function (config) {
                             presets: ['es2015', 'react'], plugins: [
                                 ["istanbul", {
                                     "exclude": [
-                                        "**/*.spec.js"
+                                        "**/*Spec.js"
                                     ]
                                 }]
                             ]
