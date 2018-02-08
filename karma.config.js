@@ -49,7 +49,7 @@ module.exports = function (config) {
             noInfo: true
         },
         coverageReporter: {
-            type: 'text-summary',
+            type: 'lcov',
             dir: 'coverage/'
         }
     });
