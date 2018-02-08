@@ -13,7 +13,8 @@ module.exports = function (config) {
             "karma-sourcemap-loader",
             "karma-phantomjs-launcher",
             "karma-es6-shim",
-            "karma-coverage"
+            "karma-coverage",
+            "karma-coveralls"
         ],
         browsers: ["PhantomJS"],
         files: [
