@@ -20,3 +20,4 @@ deploy:
   bucket: "react-guessing-game"
   skip_cleanup: true
   acl: public_read
+after_success: coveralls
