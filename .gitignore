@@ -54,3 +54,4 @@ fabric.properties
 /documentation
 .vagrant
 /coverage
+.coveralls.yml
